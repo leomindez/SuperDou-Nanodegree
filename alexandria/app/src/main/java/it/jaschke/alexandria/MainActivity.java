@@ -156,7 +156,11 @@ public class MainActivity extends AppCompatActivity implements NavigationDrawerF
         @Override
         public void onReceive(Context context, Intent intent) {
             if(intent.getStringExtra(MESSAGE_KEY)!=null){
-                Toast.makeText(MainActivity.this, intent.getStringExtra(MESSAGE_KEY), Toast.LENGTH_LONG).show();
+                Toast message = null;
+                if(message != null)
+                    message.cancel();
+                message = Toast.makeText(MainActivity.this, intent.getStringExtra(MESSAGE_KEY), Toast.LENGTH_LONG);
+                message.show();
             }
         }
     }
