@@ -12,6 +12,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ListView;
+import android.widget.TextView;
 
 import barqsoft.footballscores.service.myFetchService;
 
@@ -24,6 +25,7 @@ public class MainScreenFragment extends Fragment implements LoaderManager.Loader
     public static final int SCORES_LOADER = 0;
     private String[] fragmentdate = new String[1];
     private int last_selected_item = -1;
+    private TextView notFoundItemsText;
 
     public MainScreenFragment()
     {
@@ -44,9 +46,11 @@ public class MainScreenFragment extends Fragment implements LoaderManager.Loader
         update_scores();
         View rootView = inflater.inflate(R.layout.fragment_main, container, false);
         final ListView score_list = (ListView) rootView.findViewById(R.id.scores_list);
+        notFoundItemsText = (TextView)rootView.findViewById(R.id.not_found_title);
         mAdapter = new scoresAdapter(getActivity(),null,0);
         score_list.setAdapter(mAdapter);
         getLoaderManager().initLoader(SCORES_LOADER,null,this);
+
         mAdapter.detail_match_id = MainActivity.selected_match_id;
         score_list.setOnItemClickListener(new AdapterView.OnItemClickListener()
         {
@@ -82,15 +86,19 @@ public class MainScreenFragment extends Fragment implements LoaderManager.Loader
         }
         */
 
-        int i = 0;
-        cursor.moveToFirst();
-        while (!cursor.isAfterLast())
-        {
-            i++;
-            cursor.moveToNext();
+        if(cursor.getCount() > 0) {
+            notFoundItemsText.setVisibility(View.GONE);
+            int i = 0;
+            cursor.moveToFirst();
+            while (!cursor.isAfterLast()) {
+                i++;
+                cursor.moveToNext();
+            }
+            //Log.v(FetchScoreTask.LOG_TAG,"Loader query: " + String.valueOf(i));
+            mAdapter.swapCursor(cursor);
+        }else{
+            notFoundItemsText.setVisibility(View.VISIBLE);
         }
-        //Log.v(FetchScoreTask.LOG_TAG,"Loader query: " + String.valueOf(i));
-        mAdapter.swapCursor(cursor);
         //mAdapter.notifyDataSetChanged();
     }
 
