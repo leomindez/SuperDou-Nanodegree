@@ -3,13 +3,13 @@
     <string name="app_name">Football Scores</string>
     <string name="about">Acerca de </string>
     <string name="action_settings">Configuración</string>
-    <string name="champions_league"></string>
-    <string name="bundesliga"></string>
+    <string name="champions_league">Liga de campeones</string>
+    <string name="bundesliga">Bundesliga</string>
     <string name="final_text">Final</string>
     <string name="first_knockout_round">Octavos de final</string>
-    <string name="football_widget"></string>
+    <string name="football_widget">Futbol Widget</string>
     <string name="group_stage_text">Fases de grupo</string>
-    <string name="matchday_text">Dia del partido</string>
+    <string name="matchday_text">Dìa del partido</string>
     <string name="primeradivison">Primera división</string>
     <string name="share_text">Compartir</string>
     <string name="today">Hoy</string>
@@ -25,7 +25,7 @@
     <string name="image_away_crest_content_desc">Imagen para mostrar el icono del equipo visitante</string>
     <string name="image_home_crest_content_desc">Imagen para mostrar el icono del equipo local</string>
     <string name="league_content_desc">Muestra el nombre de la liga</string>
-    <string name="match_day_content_desc">Muestra el dia del partido</string>
+    <string name="match_day_content_desc">Muestra el día del partido</string>
     <string name="no_results_found_title">No se encontraron resultados</string>
     <string name="score_content_desc">Muestra el marcador final</string>
     <string name="share_button_content_desc">Botón para compartir la información del partido</string>
@@ -33,4 +33,6 @@
     <string name="widget_icon_image_content_desc">Icono de la app para el widget</string>
     <string name="widget_matches_list">Lista para mostrar los marcadores</string>
     <string name="widget_subtitle_content_desc">Muestra el subtitulo del widget</string>
+    <string name="widget_title_content_desc">Muestra el nombre de la app en el widget</string>
+    <string name="widget_text">Es un widget probablemente</string>
 </resources>
