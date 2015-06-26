@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Football Scores</string>
+    <string name="about">Acerca de </string>
+    <string name="action_settings">Configuración</string>
+    <string name="champions_league"></string>
+    <string name="bundesliga"></string>
+    <string name="final_text">Final</string>
+    <string name="first_knockout_round">Octavos de final</string>
+    <string name="football_widget"></string>
+    <string name="group_stage_text">Fases de grupo</string>
+    <string name="matchday_text">Dia del partido</string>
+    <string name="primeradivison">Primera división</string>
+    <string name="share_text">Compartir</string>
+    <string name="today">Hoy</string>
+    <string name="tomorrow">Mañana</string>
+    <string name="widget_subtitle">Marcadores</string>
+    <string name="yesterday">Ayer</string>
+    <string name="about_content_desc">Descripción sobre la aplicación</string>
+    <string name="about_text">La aplicación obtiene partidos de diferentes  ligas Seria A,Bundesliga,Primera Division y la Uefa Champions League. Todos los partidos son obtenido de football-data.org free API.</string>
+    <string name="away_name_content_desc">Muestra el nombre del equipo visitante</string>
+    <string name="date_content_desc">Muestra la fecha del partido</string>
+    <string name="hello_world"></string>
+    <string name="home_name_content_desc">Muestras el nombre del equipo local</string>
+    <string name="image_away_crest_content_desc">Imagen para mostrar el icono del equipo visitante</string>
+    <string name="image_home_crest_content_desc">Imagen para mostrar el icono del equipo local</string>
+    <string name="league_content_desc">Muestra el nombre de la liga</string>
+    <string name="match_day_content_desc">Muestra el dia del partido</string>
+    <string name="no_results_found_title">No se encontraron resultados</string>
+    <string name="score_content_desc">Muestra el marcador final</string>
+    <string name="share_button_content_desc">Botón para compartir la información del partido</string>
+    <string name="title_activity_about"></string>
+    <string name="widget_icon_image_content_desc">Icono de la app para el widget</string>
+    <string name="widget_matches_list">Lista para mostrar los marcadores</string>
+    <string name="widget_subtitle_content_desc">Muestra el subtitulo del widget</string>
+</resources>
