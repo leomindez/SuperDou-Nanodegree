@@ -3,8 +3,9 @@
     package="barqsoft.footballscores" >
 
     <uses-permission
-        android:name="android.permission.INTERNET"
-        android:maxSdkVersion="21" />
+        android:name="android.permission.INTERNET" />
+    <permission android:name="android.permission.BIND_REMOTEVIEWS"/>
+
 
     <application
         android:allowBackup="true"
@@ -23,7 +24,9 @@
 
         <provider
             android:name=".ScoresProvider"
-            android:authorities="barqsoft.footballscores" />
+            android:authorities="barqsoft.footballscores"
+            android:exported="true"
+            />
 
         <activity
             android:name=".AboutActivity"
@@ -34,6 +37,23 @@
                 android:value="barqsoft.footballscores.MainActivity" />
         </activity>
         <service android:name=".service.myFetchService" />
+
+        <receiver
+            android:name=".widget.FootballWidgetProvider"
+            android:label="@string/football_widget"
+            android:icon="@drawable/ic_launcher">
+
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE"/>
+            </intent-filter>
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/football_widget"/>
+        </receiver>
+
+        <service android:name=".service.FootballRemoteViewsService"
+            android:permission="android.permission.BIND_REMOTEVIEWS"/>
+
     </application>
 
 </manifest>
