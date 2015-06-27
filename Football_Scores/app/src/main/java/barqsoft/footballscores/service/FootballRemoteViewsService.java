@@ -58,7 +58,8 @@ public class FootballRemoteViewsService extends RemoteViewsService {
 
         @Override
         public void onDestroy() {
-            footballCursor.close();
+            if(footballCursor != null)
+                footballCursor.close();
         }
 
         @Override

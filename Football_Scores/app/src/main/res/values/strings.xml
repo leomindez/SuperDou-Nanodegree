@@ -53,5 +53,6 @@
     <string name="away_name_content_desc">Show name away team </string>
     <string name="date_content_desc">Shows data of match</string>
 
+    <string name="not_known_league_text">Not known League Please report</string>
 
 </resources>

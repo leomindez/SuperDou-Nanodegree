@@ -23,7 +23,6 @@ public class FootballWidgetProvider extends AppWidgetProvider {
     @TargetApi(Build.VERSION_CODES.ICE_CREAM_SANDWICH)
     @Override
     public void onUpdate(Context context, AppWidgetManager appWidgetManager, int[] appWidgetIds) {
-        Log.d(FootballWidgetProvider.class.getSimpleName(), "onUpdate");
 
         for (int appWidgetId : appWidgetIds) {
 
